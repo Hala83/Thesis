@@ -3,7 +3,7 @@
 # A folder has group of 60 Netcdf files is passed for the code
 # Creation for each Netcdf file a JSON file with same name if that JSON file doesn't exist already
 # Extracting of attributes and depending on the pollutant the parsing is different as not all Netcdf files are unified
-3 Scaneline and ground_pixel are used to search and find the location, time and value of the pollutant
+# Scaneline and ground_pixel are used to search and find the location, time and value of the pollutant
 import json
 from netCDF4 import Dataset
 from collections import OrderedDict
