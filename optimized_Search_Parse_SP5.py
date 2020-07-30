@@ -75,7 +75,7 @@ def read_pollution_db(latitude, longitude, delta_lat, delta_long):
                 ntcdfValueArray = []
 
                 ground_pixel_start_index = 0
-###############################Checking that the required latitude is found in the file#################################
+###############################Checking that the required latitude is found in the scanline#################################
                 for scanline_index in tqdm.tqdm(range(0, scanline_count)): # The progress is being printed using tqdm loop
                     #### for every scaneline get min and max latitude
                     #### the latitude is lees than min or greater than max then skip this scanline
@@ -95,7 +95,7 @@ def read_pollution_db(latitude, longitude, delta_lat, delta_long):
                         monitoring_time = str(monitoring_time.__add__('Z'))
 
                     first_ground_pixel = None
-#######################Extracting the latitude and longitude values for all the values after guaranteeing that the required lat. is in the file######
+#######################Extracting the latitude and longitude values for all the values after guaranteeing that the required lat. is in the scaneline######
                     for ground_pixel_index in range(ground_pixel_start_index, ground_pixel_count):
                         lat_approximated_value = net_cdf_product.variables['latitude'][0][scanline_index][
                             ground_pixel_index]
