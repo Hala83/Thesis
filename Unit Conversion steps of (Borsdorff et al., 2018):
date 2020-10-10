@@ -1,0 +1,7 @@
+(a) First convert the pollutant column from mol/m-2 to molecules/cm-2.
+columns=columns×6.022141E19
+(b) In the Nedcdf file use the surface pressure corresponding to the retrieved pollutant column under PRODUCT/SUPPORT_DATA/DETAILED_RESULTS.
+col_air=surface_pressure×avogadro/(mass_dry_air×gravity)
+(c) And finally use the following equation, it will give the CO concentration in ppb.
+COconcentration=co_column/air_column/1e9p pb
+In this project, the factor in the equation (5.8) used by (Mermigkas, 2019)is comparedwith the equations 5.10, 5.11 and 5.12 used by (Borsdorff et al., 2018)
